@@ -48,6 +48,23 @@ a {
   line-height: 1.26; /* 126.316% */
   letter-spacing: -0.76px;
 }
+/* dấu ... khi nội dung quá dài */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.line-clamp.line-3 {
+  --line-clamp: 4;
+}
+/* từ quá nhiều kí tự, không có khoảng trắng */
+.break-all {
+  word-break: break-all;
+}
 /* =======================header======thuộc tính riêng*/
 .header {
   background: #fffcf4;
@@ -313,6 +330,7 @@ a {
   object-fit: cover;
 }
 .popular .courses-item {
+  flex: 1;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
@@ -374,4 +392,67 @@ a {
   background-color: var(--primary-color);
   color: #fff;
   cursor: pointer;
+}
+/* ====================feed back====================== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+.feedback .feedback-item {
+  display: flex;
+  justify-content: space-between;
+}
+.feedback .feedback-item .avata {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feedback .feedback-item .desc {
+  width: 130px;
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+.feedback .feedback-item .desc1 {
+  margin-top: 4px;
+  width: 159px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+.feedback-item .content .open-quotes {
+  margin-left: 241px;
+  width: 30px;
+  height: 28px;
+}
+.feedback-item .content .blockquote {
+  margin-left: 271px;
+  width: 740px;
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.54; /* 153.846% */
+}
+.feedback .feedback-item .dots {
+  margin-top: 28px;
+  display: flex;
+  gap: 6px;
+}
+.feedback .feedback-item .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback .feedback-item .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
 }
